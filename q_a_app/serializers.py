@@ -6,7 +6,7 @@ from .models import User, Question, Answer
 class UserSerializers(serializers.ModelSerializer):
 
     class Meta:
-        models = User
+        model = User
         fields = ('id', 'username', 'password')
 
 # ----------------------------------------------------------------
@@ -14,14 +14,14 @@ class UserSerializers(serializers.ModelSerializer):
 class QuestionSerializers(serializers.ModelSerializer):
 
     class Meta:
-        models = Question
-        fields = ('id', 'question', "user")
+        model = Question
+        fields = ('id', 'question')
 
 # ----------------------------------------------------------------
 
 class AnswerSerializers(serializers.ModelSerializer):
 
     class Meta:
-        models = Answer
+        model = Answer
         fields = ('id', 'answer')
 
